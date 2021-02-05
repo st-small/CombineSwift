@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fWi-7Z-kGO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5d8-ib-RiB">
+            <objects>
+                <viewController id="fWi-7Z-kGO" customClass="ViewController" customModule="KVOPublisher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sNd-6t-5aQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9AT-sv-IFM">
+                                <rect key="frame" x="20" y="84" width="374" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="por-fz-zvb"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="fZX-q1-POu" kind="embed" id="V9u-dR-akz"/>
+                                </connections>
+                            </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Tg9-1L-CJ2">
+                                <rect key="frame" x="20" y="424" width="374" height="112.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjS-Cw-rzD">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                        <state key="normal" title="Load Video"/>
+                                        <connections>
+                                            <action selector="loadVideo:" destination="fWi-7Z-kGO" eventType="touchUpInside" id="7Nu-kV-p36"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jUN-kp-0mI">
+                                        <rect key="frame" x="0.0" y="50" width="374" height="22"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xg8-10-ZYf">
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="22"/>
+                                                <state key="normal" image="play.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="playTapped:" destination="fWi-7Z-kGO" eventType="touchUpInside" id="bRl-WK-TdM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogg-YR-Wcn">
+                                                <rect key="frame" x="197" y="0.0" width="177" height="22"/>
+                                                <state key="normal" image="pause.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="pauseTapped:" destination="fWi-7Z-kGO" eventType="touchUpInside" id="rPi-xV-D1g"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bkc-oQ-KnO">
+                                        <rect key="frame" x="0.0" y="92" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Wk-6W-Edw">
+                                <rect key="frame" x="20" y="548.5" width="374" height="313.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nAU-ki-cQL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9AT-sv-IFM" firstAttribute="top" secondItem="nAU-ki-cQL" secondAttribute="top" constant="40" id="GLe-ZP-2gU"/>
+                            <constraint firstItem="3Wk-6W-Edw" firstAttribute="bottom" secondItem="nAU-ki-cQL" secondAttribute="bottom" id="PJZ-fq-OwW"/>
+                            <constraint firstItem="3Wk-6W-Edw" firstAttribute="top" secondItem="Tg9-1L-CJ2" secondAttribute="bottom" constant="12" id="TiY-nd-Bjd"/>
+                            <constraint firstItem="Tg9-1L-CJ2" firstAttribute="width" secondItem="9AT-sv-IFM" secondAttribute="width" id="Vlo-ye-TYT"/>
+                            <constraint firstItem="Tg9-1L-CJ2" firstAttribute="top" secondItem="9AT-sv-IFM" secondAttribute="bottom" constant="60" id="dLP-Ts-uDP"/>
+                            <constraint firstItem="Tg9-1L-CJ2" firstAttribute="centerX" secondItem="nAU-ki-cQL" secondAttribute="centerX" id="jei-EF-qSw"/>
+                            <constraint firstItem="nAU-ki-cQL" firstAttribute="trailing" secondItem="9AT-sv-IFM" secondAttribute="trailing" constant="20" id="lpt-9c-YJ6"/>
+                            <constraint firstItem="3Wk-6W-Edw" firstAttribute="leading" secondItem="nAU-ki-cQL" secondAttribute="leading" constant="20" id="sTj-jE-sQd"/>
+                            <constraint firstItem="nAU-ki-cQL" firstAttribute="trailing" secondItem="3Wk-6W-Edw" secondAttribute="trailing" constant="20" id="sv7-as-7Ps"/>
+                            <constraint firstItem="9AT-sv-IFM" firstAttribute="leading" secondItem="nAU-ki-cQL" secondAttribute="leading" constant="20" id="ziO-bR-gZE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logTextView" destination="3Wk-6W-Edw" id="V9u-NT-UoE"/>
+                        <outlet property="pauseButton" destination="Ogg-YR-Wcn" id="3Sj-gu-oha"/>
+                        <outlet property="playButton" destination="Xg8-10-ZYf" id="qVN-zE-Mo5"/>
+                        <outlet property="statusLabel" destination="Bkc-oQ-KnO" id="o7G-gp-6He"/>
+                        <outlet property="videoContainer" destination="9AT-sv-IFM" id="bMz-x4-p2G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbt-dr-04F" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="103.79464285714285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dCF-LV-LRi">
+            <objects>
+                <viewController id="fZX-q1-POu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="khf-rm-Fk8">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="280"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6gM-JM-Cdy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hME-jd-OOr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="683" y="87"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pause.fill" catalog="system" width="116" height="128"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

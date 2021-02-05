@@ -1,0 +1,19 @@
+//
+//  ViewController.swift
+//  CombineTestingExamples
+//
+//  Created by Stanly Shiyanovskiy on 04.01.2021.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+
+}
+

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9f3-KQ-RUF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="yDp-vM-8RO">
+            <objects>
+                <viewController id="9f3-KQ-RUF" customClass="ViewController" customModule="ExampleApp_HandlingErrors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c97-is-4ED">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-four" translatesAutoresizingMaskIntoConstraints="NO" id="O9m-vJ-Mq1">
+                                <rect key="frame" x="175" y="421" width="64" height="64"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="Pca-GX-T0E"/>
+                                    <constraint firstAttribute="height" constant="64" id="sEv-g4-asu"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6p1-oF-Vpg" customClass="BigButton" customModule="ExampleApp_HandlingErrors" customModuleProvider="target">
+                                <rect key="frame" x="87" y="586" width="240" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="0Bi-Qz-EK3"/>
+                                    <constraint firstAttribute="height" constant="52" id="h1O-au-0Mi"/>
+                                </constraints>
+                                <state key="normal" title="Roll Dice"/>
+                                <connections>
+                                    <action selector="rollDiceTapped:" destination="9f3-KQ-RUF" eventType="touchUpInside" id="YCE-jI-6OA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="w4R-jx-djY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6p1-oF-Vpg" firstAttribute="centerX" secondItem="w4R-jx-djY" secondAttribute="centerX" id="0F2-QR-1le"/>
+                            <constraint firstItem="6p1-oF-Vpg" firstAttribute="top" secondItem="O9m-vJ-Mq1" secondAttribute="bottom" constant="101" id="4Jz-qG-IuO"/>
+                            <constraint firstItem="O9m-vJ-Mq1" firstAttribute="centerY" secondItem="w4R-jx-djY" secondAttribute="centerY" id="KUd-iw-HzL"/>
+                            <constraint firstItem="O9m-vJ-Mq1" firstAttribute="centerX" secondItem="w4R-jx-djY" secondAttribute="centerX" id="sN3-w5-1yD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="diceImage" destination="O9m-vJ-Mq1" id="pQu-EA-Y9u"/>
+                        <outlet property="rollDiceButton" destination="6p1-oF-Vpg" id="VTP-DF-lHy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="liL-cC-dbV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94.20289855072464" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="6p1-oF-Vpg">
+            <size key="intrinsicContentSize" width="60" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="dice-four" width="64" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
